@@ -1,0 +1,25 @@
+{
+  "name": "react-bind-to-class",
+  "version": "1.0.0",
+  "description": "Helper bind method for use with es6 react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemisj/react-bind-to-class.git"
+  },
+  "keywords": [
+    "react",
+    "helpers",
+    "bind",
+    "es2015"
+  ],
+  "author": "Maks Nemisj <maks@nemisj.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nemisj/react-bind-to-class/issues"
+  },
+  "homepage": "https://github.com/nemisj/react-bind-to-class#readme"
+}
