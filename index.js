@@ -30,8 +30,8 @@ function bindToClass(scope, methods) {
     var proto = scope.constructor.prototype;
 
     Object.getOwnPropertyNames(proto).forEach(function(methodName) {
-      if (isExcluded(methodName) && methods.indexOf(methodName) === -1) {
-        var original = scope[methodName];
+      var original = scope[methodName];
+      if (typeof original === 'function' && isExcluded(methodName) && methods.indexOf(methodName) === -1) {
         scope[methodName] = function () {
           // test whether the scope is different
           if (this !== scope) {
