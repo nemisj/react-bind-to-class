@@ -1,4 +1,4 @@
-== How to use ==
+## How to use
 
 ```javascript
 import bindToClass from 'react-bind-to-class';
@@ -58,3 +58,11 @@ class Component extends React.Component {
   }
 }
 ```
+
+## Benefits
+
+* All methods are bound even the onse you haven't included
+  * Helps to prevent wrong `this` scope in event handlers
+  * Gives warnings, so that it can be fixed later without stopping the app from working
+* Gives error if methodName doesn't exists at the moment of instance creation
+  * Error happens before the real event
