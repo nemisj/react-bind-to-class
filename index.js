@@ -4,14 +4,17 @@ var excludeMethods = [
   /^component[A-Za-z]+$/
 ];
 
+var displayNameReg = /^function\s+([a-zA-Z]+)/;
+
 function isExcluded(methodName) {
   return excludeMethods.some(function (reg) {
-    return reg.test(method) === false;
+    return reg.test(methodName) === false;
   });
 }
 
 function bindToClass(scope, methods) {
-  var componentName = scope.constructor.toString().match(/^function\s+([a-zA-Z]+)\(/)[1];
+  var componentName = scope.constructor.toString().match(displayNameReg)[1];
+  methods = Array.isArray(methods) ? methods : [];
 
   methods.forEach(function(methodName) {
     if (methodName in scope) {
@@ -33,7 +36,7 @@ function bindToClass(scope, methods) {
           // test whether the scope is different
           if (this !== scope) {
             var e = 'Warning: Method "' + methodName + '" of "' + componentName + '" is not bound. Bad you!';
-            console.warn(e);
+            console.error(e);
           }
 
           return original.apply(scope, arguments);
