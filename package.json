@@ -1,6 +1,6 @@
 {
   "name": "react-bind-to-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper bind method for use with es6 react components",
   "main": "index.js",
   "scripts": {
