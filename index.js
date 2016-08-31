@@ -5,7 +5,7 @@ var excludeMethods = [
   /^shouldComponentUpdate$/
 ];
 
-var displayNameReg = /^function\s+([a-zA-Z]+)/;
+var displayNameReg = /^function\s+(_?[a-zA-Z]+)/;
 
 function isExcluded(methodName) {
   return excludeMethods.some(function (reg) {
