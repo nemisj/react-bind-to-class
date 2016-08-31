@@ -1,7 +1,8 @@
 var excludeMethods = [
   /^constructor$/, 
   /^render$/, 
-  /^component[A-Za-z]+$/
+  /^component[A-Za-z]+$/,
+  /^shouldComponentUpdate$/
 ];
 
 var displayNameReg = /^function\s+([a-zA-Z]+)/;
